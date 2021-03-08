@@ -1,0 +1,85 @@
+'''
+Python Introduction Work
+
+'''
+
+''' 
+Understanding and Using Functions:
+
+Pseudocode for a function in Python, how it works
+
+begins with def (definition) 
+
+def function_name(Parameter List):
+    statements -> function body
+    return -> statement
+    
+Functions are First Class Objects: 
+You can treat this as a variable, or pass as an arguement for another function,
+or even return them as values from other functions 
+
+'''
+
+#simple function
+
+def greet(name):
+    print("Hi " + name)
+
+#Now we will call the above greet function 
+
+playerName = input("Hello what is your name?: ")   
+greet(playerName)
+
+def welcome(character):
+    print("Hello " + character + "," + " Welcome to the Game!")
+
+characterName = input("Please enter your character name: ")
+welcome(characterName)
+
+# You can also accomplish the same idea by attaching it to a variable
+
+varGreet = greet("Evan")
+
+print(varGreet)
+
+
+'''
+Functions 2
+
+How to create basic math functions and use the return command
+
+'''
+def fahrenheit(T_in_celsius):
+    return (T_in_celsius * 9 / 5) + 32
+    
+# return command returns the output
+
+print(fahrenheit(25))
+
+# We can also use variables within the function to return our value
+
+def fahrenheit2(T_in_celsius2):
+    valReturn = (T_in_celsius2)
+    return valReturn
+
+print(fahrenheit2(27))
+
+# You can use the pass command to null the operation
+
+# How to run mulitple data points through the function
+
+for t in (22.6, 25.7, 28, 32, 29): 
+    print(t, ":", fahrenheit(t))
+
+# Continued pratice
+
+def times5(number):
+    numberTimesFive = number * 5
+    return numberTimesFive
+
+for n in (7, 9, 10, 11, 15):
+    print(n, ':', times5(n))
+    
+'''
+Functions 3
+'''
