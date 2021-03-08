@@ -4,7 +4,7 @@ Python Introduction Work
 '''
 
 ''' 
-Understanding and Using Functions:
+Functions 1: Understanding and Using Functions
 
 Pseudocode for a function in Python, how it works
 
@@ -44,7 +44,7 @@ print(varGreet)
 
 
 '''
-Functions 2
+Functions 2: Basic Math Functions
 
 How to create basic math functions and use the return command
 
@@ -81,8 +81,9 @@ for n in (7, 9, 10, 11, 15):
     print(n, ':', times5(n))
     
 '''
-Functions 3
+Functions 3: Default Arguements
 A Default Arguement using string Variable
+
 '''
 #Define function hello based on string variable
 def hello(name = "everybody"):
@@ -92,7 +93,7 @@ hello() #This prints Hello everybody!
 hello('Evan') # This prints Hello Evan!
 
 '''
-Functions 4
+Functions 4: Arguement Annotations
 
 Function arguement annotations can be useful way to give programmers hints
 about how a function is supposed to be used. These annotations are added with : 
@@ -120,6 +121,52 @@ print(combineThree(data[0], data[1], data[2], data[3]))
 # This will combine all our data into one tuple 
 
 '''
-Functions 5
+Functions 5: Returning multiple values
+
+To return multiple values from a function, simply return a tuple 
+
 '''
 
+def myFunc():
+    return 1, "Hello", [1,2, "world"] # tuple being returned
+
+print(myFunc())
+
+# We can also use variables to print individual parts of this function return
+
+a, b, c = myFunc()
+print(c)
+print(a)
+print(b, c)
+
+'''
+Functions 6: Recursion
+
+Recursion in programming is where a function calls itself one or more time in its body.
+In Computer science, recursion is a method where the solution to a problem is based on
+solving smaller instances of the same problem.
+
+'''
+
+# As an example here is a function which will return the factorial for a number
+
+def factorial(number):
+    #error handling #This is doing a check
+    #in order to calculate the function we must have an integer > 0
+    if not isinstance(number, int):
+        raise TypeError("Sorry, Number must be an integer")
+    if not number >= 0:
+        raise ValueError("Sorry, Number must be larger than zero")
+    
+    def inner_factorial(number):
+        if number <= 1:
+            return 1
+        return number * inner_factorial(number-1)
+    return inner_factorial(number)
+
+#call outer function
+print(factorial(4))
+
+'''
+End Functions CourseWork
+'''
