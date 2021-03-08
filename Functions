@@ -82,4 +82,44 @@ for n in (7, 9, 10, 11, 15):
     
 '''
 Functions 3
+A Default Arguement using string Variable
 '''
+#Define function hello based on string variable
+def hello(name = "everybody"):
+    print("Hello " + name + "!")
+
+hello() #This prints Hello everybody! 
+hello('Evan') # This prints Hello Evan!
+
+'''
+Functions 4
+
+Function arguement annotations can be useful way to give programmers hints
+about how a function is supposed to be used. These annotations are added with : 
+and can be seen when calling the help(function) command
+
+'''
+
+def add(x:int, y:int) -> int: #use colon to provide more information of what you need
+    return x + y 
+
+print(help(add))
+print(add(20, 2))
+
+listNum = ([2,3], [4,5], [6,8]) 
+print(add(listNum[0], listNum[-1])) # This is printing the full list 
+
+#Practice 
+
+def combineThree(x: int, y:int, z:int) -> int:
+    return x + y + z
+
+data = ([1, 4, 6], [7, 9, 10], [20, 5, 4], [30, 4, 6])
+
+print(combineThree(data[0], data[1], data[2], data[3])) 
+# This will combine all our data into one tuple 
+
+'''
+Functions 5
+'''
+
