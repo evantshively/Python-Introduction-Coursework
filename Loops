@@ -120,3 +120,50 @@ for food in edibles:
 else:
     print("I am glad: No Spam!")
 print("Finally, done!")
+
+'''
+Loops 6: Using the range function in a loop
+'''
+
+#built in function called range() 
+#generates an interator of Arithmetic progressions
+#using range will help maximize your work potential Range increases performance
+
+print(range(5))
+for i in range(5):
+    print(i)
+
+print(list(range(4, 10)))
+
+print(list(range(4, 50, 5))) # the third number is setting the increment
+
+print(list(range(50, 4, -5)))
+
+n = 200
+sum = 0
+for counter in range(1, n+1):
+    sum = sum + counter 
+print("Sum of 1 until %d: %d" % (n, sum))
+
+'''
+Loops 7: Final Example
+Creating a Fibonacci Sequence as a loop
+'''
+
+fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+print(fibonacci[3])
+#print(type(fibonacci))
+#print(len(fibonacci))
+for i in range(len(fibonacci)):
+    print(i, fibonacci[i]) 
+ 
+#Printing Strings via loops 
+
+strText = "This is Python"
+for s in range(0, len(strText)):
+    print(strText[s], end = "")
+    
+lstText = ["This", "is", "Python"]
+for l in range(len(lstText)):
+    print(lstText[1])
+    
