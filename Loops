@@ -80,7 +80,22 @@ while current_count < count:
 print("The average was: ", sum / count)
 
 '''
-Loops 4 :
+Loops 4 : Continued examples
+
+Using the end = " " command
+
+setting parameters via for and in 
+
 '''
 
+#How to use the end = " " command to print all your outputs on one line
 
+languages = ["C", "C++", "Perl", "Python"]
+
+for language in languages:
+    print(language, end = " ")
+
+words = ['cat', 'window', "tiger"]
+
+for w in words:
+    print(w, w[0], w[-1], len(w)) # You can call global variables through object reference
