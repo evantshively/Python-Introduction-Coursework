@@ -99,3 +99,24 @@ words = ['cat', 'window', "tiger"]
 
 for w in words:
     print(w, w[0], w[-1], len(w)) # You can call global variables through object reference
+    
+'''
+Loops 5: For Loops
+
+Important to note that For loops can be expensive in terms of processing power if you are working with a large list
+For loops will comb through the entire data source you give it
+'''
+
+edibles = ["bacon", "spam", "eggs", "nuts"] # Data 
+
+print(id(edibles))
+for food in edibles:
+    print(food)
+    if food == "spam":
+        print("No more spam please!")
+        #break
+    if food != "spam":
+        print("Great, delicious " + food)
+else:
+    print("I am glad: No Spam!")
+print("Finally, done!")
