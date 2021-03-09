@@ -59,4 +59,28 @@ else:    # If none of the conditions are met the loop will go here.
     print("You made it!")
     
 
+'''
+Loops 3: More loop examples
+Creating a while Loop that averages multiple numbers
+'''
+
+# Keep asking for numbers until count numbers have been entered
+#prints the average value 
+
+sum = 0.0
+print("This program will take several numbers then average them.")
+count = int(input("How many numbers would you like to average: "))
+current_count = 0 
+
+while current_count < count:
+    current_count = current_count + 1 # this prevents the loop from running endlessly
+    number = float(input("Enter a number: "))
+    sum = sum + number
+    
+print("The average was: ", sum / count)
+
+'''
+Loops 4 :
+'''
+
 
