@@ -1,0 +1,62 @@
+'''
+Algorithms make it necessary for a programming language to 
+have a construction which makes it possible to carry out a sequence 
+of statements repeatedly. 
+
+Loops: 
+-Count-controlled loops: for(i=0; i <= n; i++) -This structure is not Python Code
+-Condition-controlled loop - while loop and do while loop
+
+Pseudo Code: 
+While (condition is true) 
+    do something 
+    % Note: The "something" should eventually result
+    % in the condition being false
+'''
+
+'''
+Loops 1: A while loop
+'''
+
+#Example of a while loop
+# The following example calculates the sum of numbers from 1 to 100
+n = 100
+total_sum = 0
+counter = 1 
+while (counter <= n):
+    total_sum = total_sum + counter # += counter
+    print(total_sum)
+    counter += 1 # come back 2
+    print(counter)
+
+print("Sum of 1 until " + str(n) + " results in " + str(total_sum))
+
+'''
+Loops 2 : if, elif, and else loops
+
+We will create a number guessing game to show how to use these different commands in loops
+
+'''
+
+import random  # module that allows the creation of random events
+upper_bound = 20 # set our two bonds for our random number to guess
+lower_bound = 1
+
+
+rndNumber = random.randint(lower_bound, upper_bound) # Uses random module to store a randNumber between 1 and 20
+guess = 0
+while guess != rndNumber:
+    guess = int(input("Guess New Number: "))
+    if guess > 0:
+        if guess > rndNumber:
+            print("Number too large")
+        elif guess < rndNumber:
+            print("Number too small")
+    else:
+        print("Sorry that you're giving up")
+        break
+else:    # If none of the conditions are met the loop will go here. 
+    print("You made it!")
+    
+
+
